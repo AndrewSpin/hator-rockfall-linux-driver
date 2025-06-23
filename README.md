@@ -1,4 +1,7 @@
-# hator-rockfall-linux-driver
+# hator rockfall linux driver
+
+This is a simple script witch emulated USB HID signal from official app for Windows
+
 ### Instaling
 
 * udev must be installed
