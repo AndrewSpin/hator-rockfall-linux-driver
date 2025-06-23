@@ -31,6 +31,6 @@ you can use any hex but the format mast be like `00aaff` (hexadecimal, 6 charact
 
 `sudo ./keyboard_change_color.sh 00ddff` Aqua
 
-`sudo ./keyboard_change_color.sh 00ddff` Big Bang Pink
+`sudo ./keyboard_change_color.sh ff0099` Big Bang Pink
 
 `sudo ./keyboard_change_color.sh ffaa00` Flash of Orange
