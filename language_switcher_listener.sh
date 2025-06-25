@@ -1,19 +1,21 @@
 #!/bin/bash
 
-PATH_TO_XKBLAYOUT_STATE="/home/andrew/xkblayout-state/xkblayout-state"
+source .env.dist
+source .env
 
-declare -A colors=(
-  [us]="ff0099"
-  [ru]="00ddff"
-  [ua]="ffaa00"
-)
+if [[ "$PATH_TO_XKBLAYOUT_STATE" == "" ]]; then
+    echo 'Path to xkblayout-state mast be added. Check your .env file (PATH_TO_XKBLAYOUT_STATE)'
+    exit 1
+fi
 
 previous_layout=""
 
 while true; do
     current_layout=$($PATH_TO_XKBLAYOUT_STATE print "%s")
     if [[ "$current_layout" != "$previous_layout" ]]; then
-        /home/andrew/hator-colors/keyboard_change_color.sh "${colors[$current_layout]}"
+        env_name="${current_layout^^}_COLOR"
+
+        /home/andrew/hator-colors/keyboard_change_color.sh "${!env_name:-$DEFAULT_COLOR}"
         previous_layout="$current_layout"
     fi
     sleep 0.5
