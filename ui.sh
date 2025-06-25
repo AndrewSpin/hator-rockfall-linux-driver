@@ -5,7 +5,7 @@ source .env
 
 # Функция выбора цвета
 pick_color() {
-    hex_color=$(yad --color)
+    hex_color=$(yad --color --gtk-palette)
 
     $PATH_TO_CURRENT_FOLDER/keyboard_change_color.sh "${hex_color:1}"
 }
