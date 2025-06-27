@@ -35,7 +35,17 @@ you can use any hex but the format mast be like `00aaff` (hexadecimal, 6 charact
 
 `sudo ./keyboard_change_color.sh ffaa00` Flash of Orange
 
-
 ---
-sudo apt install zenity
-sudo apt install yad
+
+### GUI
+
+You can also manage your keyboard in window application
+
+make sure you've installed
+
+`sudo apt install python3-gi gir1.2-gtk-3.0`
+`pip3 install PyGObject`
+
+For open settings window run:
+
+`sudo python3 UI/main.py`

@@ -15,7 +15,7 @@ while true; do
     if [[ "$current_layout" != "$previous_layout" ]]; then
         env_name="${current_layout^^}_COLOR"
 
-        /home/andrew/hator-colors/keyboard_change_color.sh "${!env_name:-$DEFAULT_COLOR}"
+        ./keyboard_change_color.sh "${!env_name:-$DEFAULT_COLOR}"
         previous_layout="$current_layout"
     fi
     sleep 0.5
