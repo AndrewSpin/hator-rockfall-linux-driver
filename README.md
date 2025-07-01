@@ -48,4 +48,4 @@ make sure you've installed
 
 For open settings window run:
 
-`sudo python3 UI/main.py`
+`sudo python3 -m UI.main`
